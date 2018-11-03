@@ -1,0 +1,14 @@
+/Users/shafran/Projects/webtutroial/webtutroial/bin/Debug/netcoreapp2.1/webtutroial.deps.json
+/Users/shafran/Projects/webtutroial/webtutroial/bin/Debug/netcoreapp2.1/webtutroial.runtimeconfig.json
+/Users/shafran/Projects/webtutroial/webtutroial/bin/Debug/netcoreapp2.1/webtutroial.runtimeconfig.dev.json
+/Users/shafran/Projects/webtutroial/webtutroial/bin/Debug/netcoreapp2.1/webtutroial.dll
+/Users/shafran/Projects/webtutroial/webtutroial/bin/Debug/netcoreapp2.1/webtutroial.pdb
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.csprojAssemblyReference.cache
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.csproj.CoreCompileInputs.cache
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.RazorAssemblyInfo.cache
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.RazorAssemblyInfo.cs
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.AssemblyInfoInputs.cache
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.AssemblyInfo.cs
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.RazorTargetAssemblyInfo.cache
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.dll
+/Users/shafran/Projects/webtutroial/webtutroial/obj/Debug/netcoreapp2.1/webtutroial.pdb
