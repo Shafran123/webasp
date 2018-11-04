@@ -2,12 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.webtutroial PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="webtutroial/wwwroot/index.html">
     <Files>
-      <File FileName="webtutroial/wwwroot/index.html" Line="7" Column="13" />
+      <File FileName="webtutroial/wwwroot/index.html" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <RunToCursorBreakpoint enabled="false" file="/Users/shafran/Projects/webtutroial/webtutroial/wwwroot/index.html" relfile="webtutroial/wwwroot/index.html" line="26" column="36" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
