@@ -7,9 +7,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <RunToCursorBreakpoint enabled="false" file="/Users/shafran/Projects/webtutroial/webtutroial/wwwroot/index.html" relfile="webtutroial/wwwroot/index.html" line="26" column="36" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

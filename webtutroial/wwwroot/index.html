@@ -2,14 +2,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-           
+            
 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+            
 
            
     </head>
 <body>
+        
+
+    <style>
+         table{
+            width: 30%;
+           border-collapse: collapse;
+         }
+    table, th, td{
+           border: 1px solid black;
+         }
+    
+    </style>
     <h1>My First Google Map</h1>
+    <p>
+            <ol id="addlist">
+              
+                <li></li>
+                
+            </ol>
+        </p>
+
+
+
+
+<span>
+
+     
+
+
+
+<table  style="float: right;">
+        <thead>
+           <tr>
+              <th>Marker Name</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+           </tr>
+        </tbody>
+     </table>
+</span> 
+
+
+
+
+
+
+
     <div id="googleMap" style="width:50%;height:400px;"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 function myMap() {
 var mapProp= {
@@ -26,11 +84,28 @@ var marker = new google.maps.Marker({
     icon: 'https://firebasestorage.googleapis.com/v0/b/eventslk-998f1.appspot.com/o/favicon.ico?alt=media&token=813ce954-74da-4011-9294-543b6b7e56a8'
 });
 
+
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+
+
+var uluru = {lat: -25.344, lng: 131.036};
+var a = new google.maps.Marker({position: uluru,
+label: labels[labelIndex++ % labels.length],
+ map: map});
+
+
+ var markerb = {lat: 6.8256540912179, lng: 80.05227256622311};
+ var b = new google.maps.Marker({position: markerb,
+ label:labels[labelIndex+0 % labels.length],
+ map: map });
+
 marker.setMap(map);
 
 google.maps.event.addListener(map, 'click', function (event) {
     placeMarker(map, event.latLng);
 });
+
 
 
 
@@ -42,6 +117,14 @@ var data = {
   lng: null,
   
 };
+
+
+$(window).bind('beforeunload',function(){
+
+
+    ref.remove();
+
+});
 
        
 
@@ -58,8 +141,10 @@ var data = {
         lat : data.lat,
         lng : data.lng,
             });
-         // addToFirebase(data);
-
+             // addToFirebase(data);
+             $("#addlist").empty();
+             
+     
         });
 
 
@@ -122,18 +207,111 @@ var lng = marker.getPosition().lng();
 
 }
 
+
+
 function gotdata(data){
+
+//var listing = selectAll('.re');
+
+
+
+    
+
+ 
  //   console.log(data.val());
     var clicks = data.val();
     var keys = Object.keys(clicks);
     console.log(keys);
+
+
+
+       
+
+
+    for(var  i= 0 ; i < keys.length; i++){
+        var  k = keys[i];
+        var id = clicks[k].startedAt;
+        var lat = clicks[k].lat;
+        var lng = clicks[k].lng;
+        console.log(id, lat , lng);
+
+        var li = document.createElement('li', clicks.lat + ': ' + lng);
+       // li.classList;'re';
+      //  li.parentElement;'addlist';
+       // li.classList('re');
+      //  li.parent('addlist');
+      $("#addlist").append(li);
+     $("#addlist").append("Latitude : ",lat ,"   ","Longtitude : ", lng,'<br>');
+
+
+
+
+
+
+
+     ;
+
+      //  $('.addlist').parent().siblings('li.l');
+     
+      //  li.parentNode('addlist');
+                //$( "p" ).parent( "addlist");
+    }
 }
 
+
+     
 
 function errdata(err){
     console.log("Error");
     console.log(err);
 }
+
+
+
+
+
+
+
+  var int = 10;
+            var uluru = {lat: -25.344, lng: 131.036};
+            var lat_a = uluru.lat;
+            var lng_a = uluru.lng;
+
+            var markerb = {lat: 6.8256540912179, lng: 80.05227256622311};
+            var lat_b = markerb.lat;
+            var lng_b = markerb.lng;
+
+            //  var name =laaat;
+
+              var marker01 = "A";
+              var marker02 = "B";
+            
+
+              //var markername = labels[labelIndex++ % labels.length];
+             //console.log(markername);
+
+             // var subject = $("#subject" + lat).val();
+                console.log(name);
+            var markup = "<tr><td>"+ marker01+"</td><td>" + lat_a + "</td><td>" + lng_a + "</td></tr><tr><td>"+ marker02+"</td><td>" + lat_b + "</td><td>" + lng_b + "</td></tr>";
+         
+            $("table tbody").append(markup);
+           
+            // $("t1").append("h");
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
@@ -155,6 +333,11 @@ function errdata(err){
            ref.on('value',gotdata, errdata);
             </script>
 
+
+
+            <script>
+          
+            </script>
 
 
 
